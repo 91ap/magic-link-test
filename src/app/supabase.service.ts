@@ -68,7 +68,7 @@ export class SupabaseService {
     };
 
     return this.supabase.from('profiles').upsert(update, {
-      returning: 'minimal', // Don't return the value after inserting
+      _returning: 'minimal', // Don't return the value after inserting
     });
   }
 
