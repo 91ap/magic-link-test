@@ -4,39 +4,7 @@ import { Profile, SupabaseService } from 'src/app/supabase.service';
 
 @Component({
   selector: 'app-account',
-  templateUrl: `
-  <ion-header>
-      <ion-toolbar>
-        <ion-title>Account</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content>
-      <form>
-        <ion-item>
-          <ion-label position="stacked">Email</ion-label>
-          <ion-input type="email" [value]="session?.user?.email"></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="stacked">Name</ion-label>
-          <ion-input type="text" name="username" [(ngModel)]="profile.username"></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="stacked">Website</ion-label>
-          <ion-input type="url" name="website" [(ngModel)]="profile.website"></ion-input>
-        </ion-item>
-        <div class="ion-text-center">
-          <ion-button fill="clear" (click)="updateProfile()">Update Profile</ion-button>
-        </div>
-      </form>
-
-      <div class="ion-text-center">
-        <ion-button fill="clear" (click)="signOut()">Log Out</ion-button>
-      </div>
-    </ion-content>
-  `,
+  templateUrl: './account.page.html',
   styleUrls: ['./account.page.scss'],
 })
 export class AccountPage implements OnInit {
